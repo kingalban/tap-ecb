@@ -12,7 +12,7 @@ from tap_ecb.client import ECBStream
 class EXRStream(ECBStream):
     """ Euro exchange rate historic stream """ ""
 
-    name = "eurofxref-hist"
+    name = "exchangerate_historic"
     path = "/stats/eurofxref/eurofxref-hist.xml"
     primary_keys: t.ClassVar[list[str]] = ["date", "currency"]
     replication_key = "date"
