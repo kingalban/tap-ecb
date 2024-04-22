@@ -4,41 +4,24 @@
 
 v0.0.1 only supports historic exchange rate data.
 
+Really this is just a singer-sdk wrapper around the endpoint https://www.ecb.europa.eu//stats/eurofxref/eurofxref-hist.xml.
+In the future, it would be great to broaden this to the whole SDMX catalog.
+
 Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
-<!--
-
-Developer TODO: Update the below as needed to correctly describe the install procedure. For instance, if you do not have a PyPi repo, or if you want users to directly install from your git repo, you can modify this step as appropriate.
-
 ## Installation
-
-Install from PyPi:
-
-```bash
-pipx install tap-ecb
-```
 
 Install from GitHub:
 
 ```bash
-pipx install git+https://github.com/ORG_NAME/tap-ecb.git@main
+pip install git+https://github.com/kingalban/tap-ecb.git@main
 ```
-
--->
 
 ## Configuration
 
+There isn't any config or authentication needed. State is also not supported by the API, so just hit play and enjoy.
+
 ### Accepted Config Options
-
-<!--
-Developer TODO: Provide a list of config options accepted by the tap.
-
-This section can be created by copy-pasting the CLI output from:
-
-```
-tap-ecb --about --format=markdown
-```
--->
 
 A full list of supported settings and capabilities for this
 tap is available by running:
@@ -46,18 +29,6 @@ tap is available by running:
 ```bash
 tap-ecb --about
 ```
-
-### Configure using environment variables
-
-This Singer tap will automatically import any environment variables within the working directory's
-`.env` if the `--config=ENV` is provided, such that config values will be considered if a matching
-environment variable is set either in the terminal context or in the `.env` file.
-
-### Source Authentication and Authorization
-
-<!--
-Developer TODO: If your tap requires special access on the source system, or any special authentication requirements, provide those here.
--->
 
 ## Usage
 
@@ -101,12 +72,6 @@ poetry run tap-ecb --help
 
 _**Note:** This tap will work in any Singer environment and does not require Meltano.
 Examples here are for convenience and to streamline end-to-end orchestration scenarios._
-
-<!--
-Developer TODO:
-Your project comes with a custom `meltano.yml` project file already created. Open the `meltano.yml` and follow any "TODO" items listed in
-the file.
--->
 
 Next, install Meltano (if you haven't already) and any needed plugins:
 
